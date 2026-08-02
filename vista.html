@@ -1,30 +1,42 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>registro de clientes</title>
 </head>
-<body>
-    <div>
-        nombre del usuario
-    </div>
-    <input type="text" id="nombre">
-    <div>
-        apellido del usuario
-    </div>
-    <input type="text" id="apellido">
-    <label for="rol cliente">rol del cliente
-        <select name="rol" id="rol_cliente">
-            <option value="cliente">cliente</option>
-            <option value="administrador">administrador</option>
-        </select>
-    </label>
-    <div>
-        <button id="registrar">registrar</button>
-    </div>
-</body>
 
-<script src="controlador.js"></script>
+<body>
+
+    <form>
+        <div>
+            nombre del usuario
+        </div>
+        <input type="text" id="nombre" required>
+
+        <div>
+            apellido del usuario
+        </div>
+        <input type="text" id="apellido" required>
+
+        <div>
+            <label for="rol_cliente">rol del cliente</label>
+            <select name="rol" id="rol_cliente">
+                <option value="cliente">cliente</option>
+                <option value="administrador">administrador</option>
+            </select>
+        </div>
+
+        <div>
+            <button id="registrar">registrar</button>
+        </div>
+    </form>
+
+    <div id="mensaje"></div>
+    <div id="error"></div>
+
+
+    <script type="module" src="controlador.js"></script>
+</body>
 
 </html>
